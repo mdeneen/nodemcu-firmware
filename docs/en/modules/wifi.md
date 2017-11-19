@@ -215,6 +215,8 @@ physical mode after setup
 
 Sets WiFi maximum tx power.  This setting is not persisted across power cycles, and the documentation does not specify if the setting persists after deep sleep.  The default value used is read from flash at boot time as part of the esp8266 init data, and its value is set by the Espressif SDK.
 
+The default value, 82, corresponds to maximum tx power.  Lowering this setting could reduce power consumption on battery backed devices.
+
 #### Syntax
 `wifi.setmaxtxpower(max_tpw)`
 
@@ -223,6 +225,9 @@ Sets WiFi maximum tx power.  This setting is not persisted across power cycles, 
 
 #### Returns
 `nil`
+
+### See also
+[`flash SDK init data`](flash/#sdk-init-data).
 
 
 ## wifi.startsmart()
